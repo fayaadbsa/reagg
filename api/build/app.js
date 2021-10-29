@@ -22,13 +22,14 @@ const notesList = {
 };
 app.use(body_parser_1.default.json());
 app.get('/', (req, res) => res.send('Welcome!'));
-app.get('/notes', (req, res) => res.send(`Noted`));
-// app.get('/notes/:name', (req,res) => res.send(`Noted ${req.params.name}`));
+app.get('/api/notes/:name', (req, res) => {
+    const noteName = req.params.name;
+    res.status(200).send(`${noteName} likes: ${notesList[noteName].like}`);
+});
 app.post('/api/notes/:name/like', (req, res) => {
-    console.log(req.params.name);
     const noteName = req.params.name;
     notesList[noteName].like += 1;
-    res.status(200).send(`${noteName} likes: ${req.body.name}`);
+    res.status(200).send(`${noteName} likes: ${notesList[noteName].like}`);
 });
 app.listen(PORT, () => {
     console.log(`server is in ${process.env.NODE_ENV} mode`);
