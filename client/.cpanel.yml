@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/admin/public_html/
+    - export DEPLOYPATHSUBF=/home/admin/public_html/*
+    - /bin/rm -rf $DEPLOYPATHSUBF
+    - /bin/cp -R build $DEPLOYPATH
