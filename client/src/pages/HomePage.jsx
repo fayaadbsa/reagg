@@ -1,4 +1,5 @@
 import React  from "react";
+import logo from "../images/logo.png"
 
 function HomePage(props) {
       return (
@@ -28,6 +29,7 @@ function HomePage(props) {
           remaining essentially unchanged. It was popularised in the 1960s with the release of 
           Letraset sheets containing Lorem Ipsum passages,
           </p>
+          <img src={logo} alt="image" />
         </div>
       )
 }
