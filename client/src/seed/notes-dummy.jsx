@@ -1,14 +1,14 @@
 export const notesDummy = [
   {
-    title: 'makan',
+    title: 'eat',
     content: 'jangan lupa makan'
   },
   {
-    title: 'tidur',
+    title: 'sleep',
     content: 'jangan lupa tidur'
   },
   {
-    title: 'mandi',
-    content: 'jangan lupa mandi'
+    title: 'play',
+    content: 'jangan lupa main'
   }
 ]
