@@ -1,5 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+
 # dependencies
 /node_modules
 /.pnp
@@ -9,7 +10,9 @@
 /coverage
 
 # production
-/build
+/client/build
+/api/build
+/api/dist
 
 # misc
 .DS_Store
@@ -21,3 +24,24 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+node_modules
+debug.log
+build.zip
+
+# development
+api/dev/seed/*
+api/dev/playground/*
+!api/dev/seed/seedMock.ts
+!api/dev/seed/mock.js
+
+# secrets
+/api/.env
+/client/.env
+.env
+app.**.yaml
+
+/gaebuild
+
+# production configuration
+app.prod.yaml
+gcpCorsConfig.json
