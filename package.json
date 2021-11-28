@@ -2,13 +2,16 @@
   "name": "reagg",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api/dist/src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "install-fe": "cd client && npm install",
+    "install-be": "cd api && npm install",
     "build-fe": "cd client && npm run build",
     "build-be": "cd api && npm run build",
     "dev-fe": "cd client && npm start",
-    "dev-be": "cd api && npm run dev"
+    "dev-be": "cd api && npm run dev",
+    "serve-be": "cd api && npm run serve"
   },
   "repository": {
     "type": "git",

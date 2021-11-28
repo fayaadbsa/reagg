@@ -29,14 +29,21 @@ Build Backend:
 npm run build-be
 ```
 
-My usual path for development:
+<B>My usual path for development:</B>
 1. Run frontend :3000/*
-2. Run backend :8000/api/v1/*
+2. Run backend :8080/api/v1/*
 3. Run tsc watch - api/tsconfig.json
 
-Staging before deployment:
+<B>Staging before deployment:</B>
 1. Build frontend
-2. Run backend :8000/*
+2. Build backend
+3. Run backend :8080/*
+
+<B>Running on server:</B>
+1. Install Frontend & Backend
+2. Build Frontend & Backend
+3. Run backend :8080/*
+
 
 ---
 
@@ -68,18 +75,25 @@ Staging before deployment:
 ### Run app on server by running the backend(port api):
 1. Running the app
   ```
-  forever start -c "npm start". 
+  forever start -c "npm run serve-be" . 
   ```
-  > not quite sure the script, not even tested yet.
+  > there's space between " and .
 2. Check the running app
   ```
   forever list
   ```
-3. map port api (8000) to http port (80)
+3. map port api (8080) to http port (80)
   ```
-  sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8000
+  sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
   ```
   > dont forget to add http rule (tcp 80) on host server from anywhere ip
+
+---
+Useful links:
+- https://cloud.google.com/nodejs/docs/setup
+- https://intellipaat.com/community/62726/how-to-install-git-in-google-compute-engine
+- https://www.bswen.com/2021/11/reactjs-ERR_OSSL_EVP_UNSUPPORTED_error_solution.html
+- https://stackoverflow.com/questions/4075287/node-express-eaddrinuse-address-already-in-use-kill-server
 
 ---
 

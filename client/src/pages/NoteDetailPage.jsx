@@ -17,7 +17,7 @@ function NoteDetailPage(props) {
       setNoteInfo({like:body?.like})
     };
     fetchData();
-  }, [title, noteInfo]);
+  }, [title]);
 
   const handleLike = async () => {
     const res = await fetch(`/api/notes/${title}/like`, {method:'POST'});
