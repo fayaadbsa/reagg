@@ -1,12 +1,10 @@
-import React, { useEffect, useState }  from "react";
+import React  from "react";
 import { connect } from 'react-redux';
 
 
 function ReduxPage(props) {
-  // const [counter, setCounter] = useState(0)
   
   function handleClick() {
-    // setCounter(counter + 1);
     props.incrementCounter(1)
   }
 
@@ -42,4 +40,3 @@ function ReduxPage(props) {
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReduxPage);
-// export default ReduxPage;
