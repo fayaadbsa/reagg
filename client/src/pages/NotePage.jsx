@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import {notesDummy} from "../seed/notes-dummy";
 
 
-function NoteDetailPage(props) {
+function NotePage(props) {
   const title = useParams().title
   const notes = notesDummy
   const note = notes.find((note) => note.title === title)
@@ -45,4 +45,4 @@ function NoteDetailPage(props) {
   )
 }
 
-export default NoteDetailPage;
+export default NotePage;
