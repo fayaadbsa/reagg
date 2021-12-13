@@ -5,15 +5,27 @@ import AppRoutes from "./AppRoutes";
 import NavBar from "./components/NavBar";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
+import { createUseStyles } from "react-jss";
+
+const useStyles = createUseStyles({
+  content: {
+    position: "relative",
+    top: "70px",
+  },
+});
 
 function App() {
+  const classes = useStyles();
+
   return (
     <Provider store={store}>
       {/* Redux Provider */}
       <Router>
         <div className="App">
           <NavBar />
-          <AppRoutes />
+          <div className={classes.content}>
+            <AppRoutes />
+          </div>
         </div>
       </Router>
     </Provider>
