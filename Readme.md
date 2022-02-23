@@ -72,7 +72,7 @@ npm run build-be
 1. git clone repo (maybe need more config on private repo)
 2. npm install all modules (root, api, client)
 3. (optional) maybe need to move folder or change dir and clean old folder
-### Run app on server by running the backend(port api):
+### Run app on server by running the backend(port api, source Lynda):
 1. Running the app
   ```
   forever start -c "npm run serve-be" . 
@@ -87,7 +87,7 @@ npm run build-be
   sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
   ```
   > dont forget to add http rule (tcp 80) on host server from anywhere ip
-(Source: lynda)
+
 ---
 Useful links:
 - https://cloud.google.com/nodejs/docs/setup
