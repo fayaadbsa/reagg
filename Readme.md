@@ -87,7 +87,7 @@ npm run build-be
   sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
   ```
   > dont forget to add http rule (tcp 80) on host server from anywhere ip
-
+(Source: lynda)
 ---
 Useful links:
 - https://cloud.google.com/nodejs/docs/setup
