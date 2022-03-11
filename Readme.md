@@ -95,6 +95,7 @@ Useful links:
 - https://www.bswen.com/2021/11/reactjs-ERR_OSSL_EVP_UNSUPPORTED_error_solution.html
 - https://stackoverflow.com/questions/4075287/node-express-eaddrinuse-address-already-in-use-kill-server
 - https://medium.com/how-to-react/config-eslint-and-prettier-in-visual-studio-code-for-react-js-development-97bb2236b31a
+- https://medium.com/idomongodb/how-to-npm-run-start-at-the-background-%EF%B8%8F-64ddda7c1f1
 
 ---
 
